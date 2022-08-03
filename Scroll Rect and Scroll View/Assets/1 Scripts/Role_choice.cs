@@ -5,21 +5,21 @@ using UnityEngine.UI;
 
 public class Role_choice : MonoBehaviour
 {
-    public GameObject[] figure;
-    public GameObject canScroll;
+    [Header("角色資料")]public GameObject[] figure;
+
+    [Header("位置判定")]public GameObject canScroll;
 
     private void Start()
     {
     }
     private void Update()
     {
-        ScrollCalueChange();
-        //Debug.Log(canScroll.transform.position);
+        Debug.Log(canScroll.transform.position);
     }
     /// <summary>
     /// 偵測腳色選項
     /// </summary>
-    private void ScrollCalueChange()
+    public void ScrollCalueChange()
     {
         if (350 < canScroll.transform.position.x) figure[0].gameObject.SetActive(true);
         else figure[0].gameObject.SetActive(false);
